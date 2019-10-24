@@ -34,4 +34,3 @@ position = Vector2( 1182.17, 769.185 )
 position = Vector2( 1177.01, 769.185 )
 
 [node name="PointCounter" parent="." instance=ExtResource( 7 )]
-show_behind_parent = true
