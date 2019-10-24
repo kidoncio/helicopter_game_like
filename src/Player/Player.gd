@@ -14,9 +14,22 @@ func _input(event) -> void:
 
 
 func touch_pressed() -> void:
+	if !$AnimatedSprite.is_playing():
+		return
+	
 	apply_impulse(Vector2(0, 0), Vector2(0, -1000))
+	
+	play_audio()
 
 
 func _on_game_over() -> void:
 	$AnimatedSprite.stop()
+	
 	apply_impulse(Vector2(0, 0), Vector2(-1000, 0))
+
+
+func play_audio() -> void:
+	if $AnimationPlayer.is_playing():
+		return
+	
+	$AnimationPlayer.play("fly")

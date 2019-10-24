@@ -1,13 +1,30 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/UI/PointCounter.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/font.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/SFX/Score/AudioScore.ogg" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 160
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "score"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("AudioScore:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [node name="Control" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -17,3 +34,9 @@ margin_right = 997.0
 margin_bottom = 193.0
 custom_fonts/font = SubResource( 1 )
 align = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/score = SubResource( 2 )
+
+[node name="AudioScore" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Pipe/Pipe.gd" type="Script" id=1]
 [ext_resource path="res://assets/Object/pipe.png" type="Texture" id=2]
+[ext_resource path="res://assets/SFX/Hit/AudioHit.ogg" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 37.4445, 127.54 )
@@ -9,6 +10,22 @@ extents = Vector2( 37.4445, 127.54 )
 [sub_resource type="SegmentShape2D" id=2]
 a = Vector2( -2.46643, -178.91 )
 b = Vector2( -4.92188, 202.916 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "hit_animation"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("AudioHit:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [node name="Pipe" type="Node2D"]
 script = ExtResource( 1 )
@@ -25,6 +42,7 @@ scale = Vector2( 3, 8 )
 texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( -3.09082, -1.50354 )
 scale = Vector2( 3, 8 )
 collision_layer = 4
@@ -38,9 +56,16 @@ position = Vector2( -4.19617e-05, 153.323 )
 shape = SubResource( 1 )
 
 [node name="PointCounter" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PointCounter"]
 position = Vector2( 125, 0 )
 shape = SubResource( 2 )
+
+[node name="AudioHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/hit_animation = SubResource( 3 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="PointCounter" to="." method="_on_PointCounter_body_entered"]

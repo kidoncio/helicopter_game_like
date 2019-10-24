@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/AudioFly.ogg-49103be7b5e344cf0a52892d6a509ae2.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX/Flying/AudioFly.ogg"
+dest_files=[ "res://.import/AudioFly.ogg-49103be7b5e344cf0a52892d6a509ae2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

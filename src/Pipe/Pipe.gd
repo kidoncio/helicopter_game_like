@@ -17,6 +17,7 @@ func _on_Area2D_body_entered(body) -> void:
 	velocity = 0
 	
 	SignalProvider.emit_signal(SignalProvider.GAME_OVER)
+	$AnimationPlayer.play("hit_animation")
 
 func _on_PointCounter_body_entered(body):
 	SignalProvider.emit_signal(SignalProvider.EARNED_POINT)
