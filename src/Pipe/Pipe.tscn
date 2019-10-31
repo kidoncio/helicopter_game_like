@@ -8,8 +8,8 @@
 extents = Vector2( 37.4445, 127.54 )
 
 [sub_resource type="SegmentShape2D" id=2]
-a = Vector2( -2.46643, -178.91 )
-b = Vector2( -4.92188, 202.916 )
+a = Vector2( -5.93066, -164.303 )
+b = Vector2( -5.93066, 175.037 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "hit_animation"
@@ -56,10 +56,9 @@ position = Vector2( -4.19617e-05, 153.323 )
 shape = SubResource( 1 )
 
 [node name="PointCounter" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PointCounter"]
-position = Vector2( 125, 0 )
+position = Vector2( 102, 6 )
 shape = SubResource( 2 )
 
 [node name="AudioHit" type="AudioStreamPlayer2D" parent="."]
