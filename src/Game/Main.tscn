@@ -17,7 +17,6 @@ script = ExtResource( 1 )
 position = Vector2( 193.692, 768.22 )
 
 [node name="Limits" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Limit" parent="Limits" instance=ExtResource( 4 )]
 position = Vector2( 0, -10 )
