@@ -16,14 +16,15 @@ _global_script_class_icons={
 [application]
 
 config/name="Flappy Parrot"
-run/main_scene="res://src/Game/Main.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://src/Menu/Menu.tscn"
+config/icon="res://assets/Player/parrot1.png"
 
 [autoload]
 
 SignalProvider="*res://src/Providers/SignalProvider.gd"
 ConfigurationProvider="*res://src/Providers/ConfigurationProvider.gd"
 PointProvider="*res://src/Providers/PointProvider.gd"
+GameProvider="*res://src/Providers/GameProvider.gd"
 
 [display]
 
