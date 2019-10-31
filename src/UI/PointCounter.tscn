@@ -40,3 +40,4 @@ anims/score = SubResource( 2 )
 
 [node name="AudioScore" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -15.0
