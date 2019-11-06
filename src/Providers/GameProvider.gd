@@ -1,8 +1,12 @@
 extends Node
 
 var is_playing: bool = false
+var is_paused: bool = false
 
 const HIGH_SCORES_FILE_PATH = "res://Game/HighScore.json"
+
+const MAIN_SCENE_PATH = "res://src/Game/Main.tscn"
+const MENU_SCENE_PATH = "res://src/Menu/Menu.tscn"
 
 var high_scores: Dictionary = {}
 

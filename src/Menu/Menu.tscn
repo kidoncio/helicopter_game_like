@@ -69,7 +69,7 @@ uppercase = true
 [node name="ButtonsContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 345.0
 margin_right = 1000.0
-margin_bottom = 764.0
+margin_bottom = 623.0
 alignment = 1
 
 [node name="PlayContainer" type="CenterContainer" parent="VBoxContainer/ButtonsContainer"]
@@ -91,6 +91,7 @@ action_mode = 0
 text = "PLAY"
 
 [node name="ResumeContainer" type="CenterContainer" parent="VBoxContainer/ButtonsContainer"]
+visible = false
 margin_top = 141.0
 margin_right = 1000.0
 margin_bottom = 278.0
@@ -110,9 +111,9 @@ action_mode = 0
 text = "RESUME"
 
 [node name="QuitContainer" type="CenterContainer" parent="VBoxContainer/ButtonsContainer"]
-margin_top = 282.0
+margin_top = 141.0
 margin_right = 1000.0
-margin_bottom = 419.0
+margin_bottom = 278.0
 
 [node name="QuitButton" type="Button" parent="VBoxContainer/ButtonsContainer/QuitContainer"]
 margin_left = 387.0
@@ -128,3 +129,5 @@ custom_constants/hseparation = 2
 action_mode = 0
 text = "QUIT"
 [connection signal="pressed" from="VBoxContainer/ButtonsContainer/PlayContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonsContainer/ResumeContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonsContainer/QuitContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
