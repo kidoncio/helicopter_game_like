@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Game/Main.gd" type="Script" id=1]
 [ext_resource path="res://src/Camera/Camera2D.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://src/Pipe/Generator/Pipe Generator.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Pipe/Pipe.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/UI/PointCounter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Menu/Pause.tscn" type="PackedScene" id=9]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -33,7 +34,6 @@ position = Vector2( 0, -10 )
 position = Vector2( 0, 1710 )
 
 [node name="Pipes" type="CanvasLayer" parent="."]
-editor/display_folded = true
 layer = 0
 
 [node name="Pipe Generator" parent="Pipes" instance=ExtResource( 6 )]
@@ -47,4 +47,6 @@ position = Vector2( 1177.01, 769.185 )
 [node name="GameOverTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="Pause" parent="." instance=ExtResource( 9 )]
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]

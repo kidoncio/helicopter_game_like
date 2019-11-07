@@ -21,8 +21,8 @@ config/icon="res://assets/Player/parrot1.png"
 
 [autoload]
 
-SignalProvider="*res://src/Providers/SignalProvider.gd"
 ConfigurationProvider="*res://src/Providers/ConfigurationProvider.gd"
+SignalProvider="*res://src/Providers/SignalProvider.gd"
 PointProvider="*res://src/Providers/PointProvider.gd"
 GameProvider="*res://src/Providers/GameProvider.gd"
 
