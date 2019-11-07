@@ -17,6 +17,8 @@ _global_script_class_icons={
 
 config/name="Flappy Parrot"
 run/main_scene="res://src/Menu/Menu.tscn"
+boot_splash/image="res://assets/Kiddo/kiddo.png"
+boot_splash/fullsize=false
 config/icon="res://assets/Player/parrot1.png"
 
 [autoload]
