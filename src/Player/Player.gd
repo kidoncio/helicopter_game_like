@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 func _input(event) -> void:
-	if event.is_action_pressed("touch"):
+	if event.is_action_pressed("touch") || event is InputEventScreenTouch:
 		touch_pressed()
 
 
