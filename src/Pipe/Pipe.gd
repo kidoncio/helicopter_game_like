@@ -4,7 +4,9 @@ export var velocity: int = -400
 
 
 func _physics_process(delta) -> void:
-	self.position = self.position + Vector2(velocity * delta, 0)
+	var points: int = PointProvider.points * 3
+	
+	self.position = self.position + Vector2((velocity - points) * delta, 0)
 	
 	if position.x < -100:
 		queue_free()

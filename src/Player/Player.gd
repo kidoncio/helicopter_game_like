@@ -17,7 +17,7 @@ func touch_pressed() -> void:
 	if !$AnimatedSprite.is_playing():
 		return
 	
-	apply_impulse(Vector2(0, 0), Vector2(0, -600))
+	apply_impulse(Vector2(0, 0), Vector2(0, -300))
 	
 	play_audio()
 

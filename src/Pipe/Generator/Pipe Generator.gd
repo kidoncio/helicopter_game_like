@@ -10,7 +10,7 @@ func _ready() -> void:
 func _on_Timer_timeout() -> void:
 	var new_pipe = pipe.instance()
 	
-	var pipe_y = rand_range(-700.0, 700.0)
+	var pipe_y = rand_range(-550.0, 550.0)
 	
 	new_pipe.position = self.position + Vector2(0, pipe_y)
 	
