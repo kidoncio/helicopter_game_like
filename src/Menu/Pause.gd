@@ -7,8 +7,6 @@ func _ready() -> void:
 
 
 func _on_MenuButton_pressed():
-	$VBoxContainer/ScoreLabel.text = "Score: " + String(PointProvider.points)
-	
 	get_tree().paused = true
 	
 	self.visible = true
