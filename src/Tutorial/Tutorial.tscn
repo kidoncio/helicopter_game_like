@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Tutorial/Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://assets/HUD/tap_tutorial.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/Fonts/font.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 1 )
+
+[node name="Tutorial" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.364706 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_right = -100.0
+custom_constants/separation = 100
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/ColorRect/VBoxContainer"]
+margin_left = 144.0
+margin_top = 501.0
+margin_right = 656.0
+margin_bottom = 1013.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Control/ColorRect/VBoxContainer"]
+margin_top = 1113.0
+margin_right = 800.0
+margin_bottom = 1198.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "TAP TO CONTROL"
+autowrap = true
+uppercase = true

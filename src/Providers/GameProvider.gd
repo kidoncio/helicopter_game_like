@@ -2,6 +2,7 @@ extends Node
 
 var is_playing: bool = false
 var is_paused: bool = false
+var tutorial_is_showed: bool = false
 
 const HIGH_SCORES_FILE_PATH = "res://Game/HighScore.json"
 
