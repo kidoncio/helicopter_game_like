@@ -10,7 +10,12 @@ func _ready() -> void:
 
 func _input(event) -> void:
 	if event.is_action_pressed("touch") || event is InputEventScreenTouch:
+		if !$ClickTimer.is_stopped():
+			return
+		
 		touch_pressed()
+		
+		$ClickTimer.start()
 
 
 func touch_pressed() -> void:

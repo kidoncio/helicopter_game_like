@@ -53,7 +53,7 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-frame = 4
+frame = 5
 playing = true
 
 [node name="AudioFly" type="AudioStreamPlayer2D" parent="."]
@@ -61,3 +61,7 @@ stream = SubResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/fly = SubResource( 4 )
+
+[node name="ClickTimer" type="Timer" parent="."]
+wait_time = 0.12
+one_shot = true
